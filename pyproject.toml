@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "poetry-add-issue"
+version = "0.1.0"
+description = "Bla bla"
+authors = ["Baz <B.Qux@foo.bar>"]
+readme = "README.md"
+packages = [{include = "poetry_add_issue", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+setuptools = "^67"
+geopandas = "^0.11.1"
+pandas = "^1.4.3"
+shapely = "^1.8.2"
+folium = "^0.12.1"
+matplotlib = "3.5.2"
+numpy = "^1.23.1"
+openmatrix = "^0.3.5.0"
+pyyaml = "^6.0"
+dask = "2022.9.2"
+distributed = "2022.9.2"
+tqdm = "^4.64.0"
+scipy = "^1.9.1"
+ipfn = "^1.4.4"
+pyarrow = "^11.0.0"
+protobuf = "3.20.0"
+matsim-tools = "^0.0.14"
+pygeos = "^0.13"
+hatch-vcs = "^0.0.1"
+hatchling = "^1.14.0"
+dvc = "^2.55.0"
+dvc-s3 = "^2.22.0"
+scikit-learn = "^1.2.2"
+
+[build-system]
+requires = ["poetry-core", "hatchling","hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.poetry.scripts]
+yo = "poetry_add_issue.baz:yo"
