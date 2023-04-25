@@ -23,7 +23,8 @@
         export LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib/
         export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath [ pkgs.zlib ]}:$LD_LIBRARY_PATH"
         export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath [ pkgs.expat ]}:$LD_LIBRARY_PATH"
-        exec ${poetry2nix.packages.${system}.poetry}/bin/poetry $@
+        # exec ${poetry2nix.packages.${system}.poetry}/bin/poetry $@
+        exec ${pkgs.poetry}/bin/poetry $@
         '';
        
       in
